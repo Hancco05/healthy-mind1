@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/styles.css';
 
 function ResourcesPage() {
   return (
@@ -97,6 +98,13 @@ function ResourcesPage() {
       <p>
         Recuerda: buscar ayuda es un signo de fortaleza, no de debilidad. Tu bienestar importa.
       </p>
+
+      <h2>Herramientas Prácticas</h2>
+      <ol>
+        <li>Descarga aplicaciones de meditación y mindfulness.</li>
+        <li>Registra tus pensamientos y emociones en un diario.</li>
+        <li>Utiliza recursos para aprender técnicas de manejo del estrés.</li>
+      </ol>
     </div>
   );
 }
