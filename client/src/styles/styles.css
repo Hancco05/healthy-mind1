@@ -1,93 +1,35 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+/* Estilos globales */
+* {
     margin: 0;
     padding: 0;
-    background: #f9f9f9;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-h1,
-h2 {
+body {
+    background-color: #f0f8ff;
+    /* Azul claro */
     color: #333;
-    margin-bottom: 15px;
-}
-
-p,
-ul,
-ol {
-    color: #555;
-}
-
-ul {
-    list-style-type: square;
-    margin-left: 20px;
-}
-
-ol {
-    margin-left: 20px;
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.homepage,
-.resources-page,
-.subscribe-page {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-form {
+    line-height: 1.6;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    min-height: 100vh;
+    /* Para que el footer siempre esté al final */
 }
 
-input[type="email"] {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background: #007bff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #0056b3;
-}
-
-.success-message {
-    color: green;
-    margin-top: 10px;
-}
+/* Barra de navegación */
 nav {
-    background-color: #f5f5f5;
-    padding: 10px;
+    background-color: #007bff;
+    /* Azul brillante */
+    padding: 15px;
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav ul li {
@@ -96,10 +38,194 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: white;
+    font-size: 18px;
     font-weight: bold;
 }
 
 nav ul li a:hover {
-    color: #007BFF;
+    color: #f0f8ff;
+    /* Azul muy claro para el hover */
+    text-decoration: underline;
+}
+
+/* Estilos generales para las páginas */
+h1,
+h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Contenedores generales (Home, Resources, Subscribe, Privacy) */
+.container {
+    padding: 20px;
+    background-color: #e7f3ff;
+    /* Fondo azul claro */
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    /* Espacio antes del footer */
+}
+
+/* Estilos para los botones */
+button {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+    /* Azul más oscuro para el hover */
+}
+
+/* Pies de página */
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+    /* Asegura que el footer siempre esté al fondo */
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Estilos específicos para la página de política de privacidad */
+.privacy-policy-container {
+    padding: 20px;
+    background-color: #f0f8ff;
+    /* Azul claro */
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.privacy-policy-container h1,
+.privacy-policy-container h2 {
+    color: #007bff;
+}
+
+.privacy-policy-container p {
+    margin-bottom: 20px;
+}
+
+/* Media queries para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        /* Reducir tamaño del título */
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        /* Reducir tamaño de los subtítulos */
+    }
+
+    p,
+    ul {
+        font-size: 1rem;
+        /* Hacer el texto un poco más pequeño */
+    }
+
+    ul {
+        padding-left: 10px;
+        /* Ajustar el padding para móviles */
+    }
+}
+
+/* Media queries para pantallas muy pequeñas (por ejemplo, teléfonos móviles) */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p,
+    ul {
+        font-size: 0.9rem;
+    }
+}
+.subscribe-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-button:disabled {
+    background-color: #ccc;
+}
+
+.divider {
+    margin: 20px 0;
+    border: 1px solid #ddd;
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
 }

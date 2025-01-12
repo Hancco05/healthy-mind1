@@ -1,33 +1,29 @@
-import React, { useState } from 'react';
-import '../styles/styles.css';
-
+import React, { useState } from 'react'; // Asegúrate de importar React y useState
+import { useForm, ValidationError } from '@formspree/react'; // Importar correctamente Formspree si se usa
+import '../styles/styles.css'; // Estilos
 
 function SubscribePage() {
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setMessage('¡Gracias por suscribirte! Pronto recibirás nuestras actualizaciones.');
-    setEmail('');
+    // Lógica para enviar el correo
+    alert(`Te has suscrito con el email: ${email}`);
   };
 
   return (
-    <div className="subscribe-page">
-      <h1>Suscríbete para recibir actualizaciones</h1>
+    <div className="subscribe-container">
+      <h1>Suscríbete para recibir actualizaciones sobre Salud Mental</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Correo Electrónico:</label>
         <input
           type="email"
-          id="email"
-          name="email"
+          placeholder="Ingresa tu correo electrónico"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
         />
         <button type="submit">Suscribirse</button>
       </form>
-      {message && <p className="success-message">{message}</p>}
     </div>
   );
 }
