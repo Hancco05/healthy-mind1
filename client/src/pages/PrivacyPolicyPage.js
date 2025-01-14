@@ -3,7 +3,7 @@ import '../styles/styles.css';
 
 function PrivacyPolicyPage() {
   return (
-    <div className="privacy-policy-container">
+    <div className="resources-container">
       <h1>Política de Privacidad</h1>
       <p>Última actualización: Enero 2025</p>
 

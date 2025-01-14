@@ -1,17 +1,16 @@
 import React from 'react';
-import '../styles/styles.css';
-import ImageSlider from './ImageSlider'; // Importar el componente ImageSlider
+import '../styles/styles.css'; // Asegúrate de que la ruta sea correcta
+import ImageSlider from './ImageSlider';
 
-function HomePage() {
+const HomePage = () => {
   return (
-    <div className="homepage-container">
+    <div className="resources-container">
       {/* Slider de imágenes */}
       <ImageSlider />
-      
       <h1>Bienvenido a la Salud Mental</h1>
       <p>
-        La salud mental es una parte esencial de nuestro bienestar general. Incluye 
-        nuestro bienestar emocional, psicológico y social, y afecta cómo pensamos, sentimos y actuamos. 
+        La salud mental es una parte esencial de nuestro bienestar general. Incluye
+        nuestro bienestar emocional, psicológico y social, y afecta cómo pensamos, sentimos y actuamos.
         Además, determina cómo manejamos el estrés, nos relacionamos con los demás y tomamos decisiones.
       </p>
       <h2>Importancia de la Salud Mental</h2>
@@ -22,7 +21,7 @@ function HomePage() {
         <li>Previene trastornos mentales y emocionales.</li>
       </ul>
       <p>
-        Recuerda, cuidar de tu salud mental es tan importante como cuidar de tu salud física. 
+        Recuerda, cuidar de tu salud mental es tan importante como cuidar de tu salud física.
         Si necesitas ayuda, no dudes en buscarla.
       </p>
     </div>
