@@ -1,5 +1,4 @@
 import React, { useState } from 'react'; // Asegúrate de importar React y useState
-import { useForm, ValidationError } from '@formspree/react'; // Importar correctamente Formspree si se usa
 import '../styles/styles.css'; // Estilos
 
 function SubscribePage() {

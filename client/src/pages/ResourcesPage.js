@@ -1,6 +1,9 @@
 import React from 'react';
 import '../styles/styles.css';
 
+// Importar el gif desde la carpeta correspondiente
+import gif1 from '../img/1.gif';
+
 function ResourcesPage() {
   return (
     <div className="resources-container">
@@ -9,6 +12,12 @@ function ResourcesPage() {
         Aquí encontrarás una variedad de recursos útiles para aprender más sobre la salud mental 
         y cómo cuidarte mejor.
       </p>
+      
+      {/* Aquí puedes agregar el gif en cualquier parte del contenido */}
+      <div className="gif-container">
+        <img src={gif1} alt="Recursos de Salud Mental" className="gif-image" />
+      </div>
+
       <h2>Recursos Disponibles</h2>
       <ul>
         <li>
@@ -30,6 +39,7 @@ function ResourcesPage() {
           Líneas de ayuda locales para personas en crisis: [Incluye aquí líneas de ayuda específicas para tu país o región].
         </li>
       </ul>
+      
       <h2>Consejos para Mejorar tu Salud Mental</h2>
       <ol>
         <li>Habla con alguien en quien confíes sobre cómo te sientes.</li>

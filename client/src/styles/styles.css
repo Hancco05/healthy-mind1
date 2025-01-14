@@ -1,4 +1,4 @@
-/* Estilos globales */
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -8,224 +8,302 @@
 
 body {
     background-color: #f0f8ff;
-    /* Azul claro */
+    /* Fondo azul claro */
     color: #333;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* Para que el footer siempre esté al final */
+    font-family: 'Arial', sans-serif;
 }
 
-/* Barra de navegación */
-nav {
-    background-color: #007bff;
-    /* Azul brillante */
-    padding: 15px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #f0f8ff;
-    /* Azul muy claro para el hover */
-    text-decoration: underline;
-}
-
-/* Estilos generales para las páginas */
-h1,
-h2 {
-    color: #007bff;
-    margin-bottom: 10px;
-}
-
-ul {
-    margin-bottom: 20px;
-    padding-left: 20px;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-/* Contenedores generales (Home, Resources, Subscribe, Privacy) */
-.container {
-    padding: 20px;
-    background-color: #e7f3ff;
-    /* Fondo azul claro */
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+/* Estilos para el slider */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
     margin-bottom: 30px;
-    /* Espacio antes del footer */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    background-color: white;
+    /* Fondo blanco */
 }
 
-/* Estilos para los botones */
-button {
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider-image.active {
+    opacity: 1;
+}
+
+.slider-container:hover .slider-image {
+    filter: brightness(0.8);
+    /* Oscurece la imagen al pasar el cursor */
+}
+
+.slider-navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 15px;
+}
+
+.slider-nav-button {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
     padding: 10px;
-    margin: 10px 0;
-    border-radius: 4px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+.slider-nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.slider-nav-button:focus {
+    outline: none;
+}
+
+/* Estilos para el gif */
+.gif-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.gif-image {
+    max-width: 200px;
+    /* Ajustado a un tamaño más grande */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilos adicionales generales */
+.home-container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+input {
+    padding: 10px;
+    margin-top: 10px;
+    width: 250px;
+    border-radius: 5px;
+    /* Bordes redondeados para los campos de texto */
     border: 1px solid #ccc;
+    /* Borde gris suave */
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
     background-color: #007bff;
     color: white;
+    border: none;
     cursor: pointer;
+    border-radius: 5px;
+    /* Bordes redondeados en el botón */
+    transition: background-color 0.3s;
 }
 
 button:hover {
     background-color: #0056b3;
-    /* Azul más oscuro para el hover */
 }
 
-/* Pies de página */
-footer {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: auto;
-    /* Asegura que el footer siempre esté al fondo */
+/* Fondo general y márgenes */
+.resources-container {
+    background-color: #ffffff;
+    /* Fondo blanco */
+    padding: 30px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
 }
 
-footer a {
-    color: white;
+h2 {
+    color: #007bff;
+    /* Título en azul */
+}
+
+ul,
+ol {
+    margin-left: 20px;
+}
+
+a {
+    color: #007bff;
+    /* Enlaces en azul */
     text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
 }
 
-footer a:hover {
+a:hover {
     text-decoration: underline;
 }
 
-footer p {
-    font-size: 14px;
+p {
     margin-top: 10px;
 }
 
-/* Estilos específicos para la página de política de privacidad */
-.privacy-policy-container {
-    padding: 20px;
+/* Estilos generales */
+.app-container {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Estilos para el encabezado (header) */
+.app-header {
+  background-color: #f0f8ff; /* Azul claro */
+  color: #333; /* Color de texto */
+  padding: 20px 0; /* Espaciado interno */
+  text-align: center; /* Centra el texto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.app-header h1 {
+  font-size: 2.5rem; /* Tamaño grande para el título */
+  margin-bottom: 10px; /* Espaciado debajo del título */
+}
+
+.app-header p {
+  font-size: 1.2rem; /* Tamaño de texto del subtítulo */
+  color: #555; /* Un gris más suave */
+}
+
+/* Contenedor principal */
+.container {
+  width: 80%;
+  margin: 0 auto; /* Centra el contenido */
+}
+
+/* Estilos para el pie de página (footer) */
+.app-footer {
+  background-color: #333; /* Negro plomo */
+  color: white; /* Texto blanco */
+  padding: 15px 0; /* Espaciado interno */
+  text-align: center; /* Centra el texto */
+  margin-top: auto; /* Asegura que el pie esté al final */
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave hacia arriba */
+}
+
+.app-footer p {
+  font-size: 1rem; /* Tamaño de texto para el pie de página */
+}
+
+/* Agrega efectos de transición al footer */
+.app-footer:hover {
+  background-color: #444; /* Oscurece un poco al pasar el cursor */
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+/* Estilos generales */
+.app-container {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilos para el encabezado (header) */
+.app-header {
     background-color: #f0f8ff;
     /* Azul claro */
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.privacy-policy-container h1,
-.privacy-policy-container h2 {
-    color: #007bff;
-}
-
-.privacy-policy-container p {
-    margin-bottom: 20px;
-}
-
-/* Media queries para dispositivos móviles */
-@media screen and (max-width: 768px) {
-    .container {
-        padding: 15px;
-        max-width: 100%;
-    }
-
-    h1 {
-        font-size: 1.8rem;
-        /* Reducir tamaño del título */
-    }
-
-    h2 {
-        font-size: 1.4rem;
-        /* Reducir tamaño de los subtítulos */
-    }
-
-    p,
-    ul {
-        font-size: 1rem;
-        /* Hacer el texto un poco más pequeño */
-    }
-
-    ul {
-        padding-left: 10px;
-        /* Ajustar el padding para móviles */
-    }
-}
-
-/* Media queries para pantallas muy pequeñas (por ejemplo, teléfonos móviles) */
-@media screen and (max-width: 480px) {
-    .container {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    h2 {
-        font-size: 1.2rem;
-    }
-
-    p,
-    ul {
-        font-size: 0.9rem;
-    }
-}
-.subscribe-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+    color: #333;
+    /* Color de texto */
+    padding: 20px 0;
+    /* Espaciado interno */
     text-align: center;
+    /* Centra el texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
 }
 
-.form-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+.app-header h1 {
+    font-size: 2.5rem;
+    /* Tamaño grande para el título */
+    margin-bottom: 10px;
+    /* Espaciado debajo del título */
 }
 
-.form-input,
-.form-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+.app-header nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-.form-button {
-    padding: 10px 20px;
-    background-color: #007bff;
+.app-header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.app-header nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.2rem;
+}
+
+.app-header nav ul li a:hover {
+    color: #0056b3;
+}
+
+/* Contenedor principal */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    /* Centra el contenido */
+    flex-grow: 1;
+    /* Permite que el contenedor ocupe el espacio disponible */
+}
+
+/* Estilos para el pie de página (footer) */
+.app-footer {
+    background-color: #333;
+    /* Negro plomo */
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    /* Texto blanco */
+    padding: 15px 0;
+    /* Espaciado interno */
+    text-align: center;
+    /* Centra el texto */
+    margin-top: auto;
+    /* Asegura que el pie esté al final */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave hacia arriba */
 }
 
-.form-button:disabled {
-    background-color: #ccc;
+.app-footer p {
+    font-size: 1rem;
+    /* Tamaño de texto para el pie de página */
 }
 
-.divider {
-    margin: 20px 0;
-    border: 1px solid #ddd;
+.app-footer a {
+    color: #007bff;
+    text-decoration: none;
 }
 
-.success-message {
-    color: green;
-    font-weight: bold;
+.app-footer a:hover {
+    color: #0056b3;
 }

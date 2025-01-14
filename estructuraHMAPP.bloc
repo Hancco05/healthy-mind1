@@ -1,0 +1,23 @@
+/mi-proyecto/
+├── /node_modules/
+├── /public/
+│   ├── index.html
+│   ├── favicon.ico
+│   └── manifest.json
+├── /src/
+│   ├── /components/
+│   │   ├── SubscribePage.js
+│   │   └── ImageSlider.js       # Componente para el slider de imágenes
+│   ├── /img/                    # Carpeta con las imágenes para el slider
+│   │   ├── image1.jpg
+│   │   ├── image2.jpg
+│   │   └── image3.jpg
+│   ├── /styles/
+│   │   └── styles.css
+│   ├── App.js
+│   ├── index.js
+│   └── setupTests.js
+├── .gitignore
+├── package.json
+├── package-lock.json
+└── README.md

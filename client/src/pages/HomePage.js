@@ -1,9 +1,13 @@
 import React from 'react';
 import '../styles/styles.css';
+import ImageSlider from './ImageSlider'; // Importar el componente ImageSlider
 
 function HomePage() {
   return (
     <div className="homepage-container">
+      {/* Slider de imágenes */}
+      <ImageSlider />
+      
       <h1>Bienvenido a la Salud Mental</h1>
       <p>
         La salud mental es una parte esencial de nuestro bienestar general. Incluye 
